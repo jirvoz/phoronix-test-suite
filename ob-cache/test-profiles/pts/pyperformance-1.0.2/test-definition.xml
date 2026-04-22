@@ -29,6 +29,7 @@
     <Option>
       <DisplayName>Benchmark</DisplayName>
       <Identifier>run-test</Identifier>
+      <DefaultEntry>2</DefaultEntry>
       <Menu>
         <Entry>
           <Name>2to3</Name>

@@ -31,6 +31,7 @@
     <Option>
       <DisplayName>Benchmark</DisplayName>
       <Identifier>run-test</Identifier>
+      <DefaultEntry>4</DefaultEntry>
       <Menu>
         <Entry>
           <Name>async_tree_io</Name>
