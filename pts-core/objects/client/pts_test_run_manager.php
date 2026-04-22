@@ -2032,7 +2032,7 @@ class pts_test_run_manager
 		// Run the actual tests
 		$this->pre_execution_process();
 		$this->call_test_runs();
-		$this->post_execution_process();
+		return $this->post_execution_process();
 	}
 	public static function user_run_save_variables()
 	{

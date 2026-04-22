@@ -34,7 +34,10 @@ class batch_run implements pts_option_interface
 	public static function run($r)
 	{
 		$test_run_manager = new pts_test_run_manager(true);
-		$test_run_manager->standard_run($r);
+		if($test_run_manager->standard_run($r) === false)
+		{
+			exit(1);
+		}
 	}
 }
 
