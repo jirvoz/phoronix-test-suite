@@ -2,6 +2,11 @@
 pip install --user torch==2.1.1 torchvision==0.16.1 torchaudio==2.1.1 pytorch-benchmark==0.3.6
 echo $? > ~/install-exit-status
 echo "#!/bin/sh
+if [ -z \"\$1\" ] || [ -z \"\$2\" ] || [ -z \"\$3\" ]; then
+	echo 'ERROR: Missing required arguments: device, batch_size, model' > \$LOG_FILE
+	echo 1 > ~/test-exit-status
+	exit 1
+fi
 echo \"import torch
 import yaml
 from torchvision.models import \$3
