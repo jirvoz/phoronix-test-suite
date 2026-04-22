@@ -4,7 +4,7 @@ tar -xf glibc-2.39.tar.xz
 cd glibc-2.39
 mkdir build
 cd build
-../configure  --disable-sanity-checks CFLAGS="-O3 -U_FORTIFY_SOURCE -Wno-error=attributes -Wno-error=cpp $CFLAGS"
+../configure  --disable-sanity-checks CFLAGS="-O3 -U_FORTIFY_SOURCE -Wno-error $CFLAGS"
 make -j $NUM_CPU_CORES
 make bench-build
 echo $? > ~/install-exit-status
