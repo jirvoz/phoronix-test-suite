@@ -8,7 +8,7 @@ elif [ -x /usr/bin/dnf ]; then
 	command_status=$?
 	if [ $command_status -ne 0 ]; then
 		# RHEL 10 and older error out, Fedora ~42 and newer have --skip-unavailable
-		sudo dnf -y install $*
+		sudo dnf -y --skip-broken install $*
 	fi
 elif [ `whoami` = "ec2-user" ]; then
 	sudo yum -y --skip-broken install $*
