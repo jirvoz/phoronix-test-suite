@@ -261,6 +261,10 @@ class pts_test_run_options
 			echo PHP_EOL . pts_client::$display->get_tab() . pts_client::cli_just_italic($error_handle) . PHP_EOL;
 			return false;
 		}
+		if(empty($option_objects) && $test_profile->has_test_options())
+		{
+			return false;
+		}
 		if($option_select != false)
 		{
 			$os = array();

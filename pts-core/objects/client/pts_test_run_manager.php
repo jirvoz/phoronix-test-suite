@@ -784,6 +784,10 @@ class pts_test_run_manager
 				}
 			}
 		}
+		if(trim($test_run_request->get_arguments()) === '' && $test_run_request->test_profile->has_test_options())
+		{
+			return true;
+		}
 		if(($run_index != 0 && count(pts_file_io::glob($test_run_request->test_profile->get_install_dir() . 'cache-share-*.pt2so')) == 0))
 		{
 			sleep($this->sleep_time_between_tests);
