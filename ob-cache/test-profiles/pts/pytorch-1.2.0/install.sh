@@ -1,6 +1,5 @@
 #!/bin/sh
 pip install --user setuptools
-pip install --user pyyaml
 pip install --user torch==2.6.0 torchvision==0.21.0 torchaudio==2.6.0 pytorch-benchmark==0.3.6
 echo $? > ~/install-exit-status
 echo "#!/bin/sh
